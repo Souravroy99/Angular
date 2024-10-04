@@ -1,0 +1,7 @@
+let val: string = "10" ;
+
+console.log(val) ;
+
+// val = "Virat" ;
+
+console.log(val) ;
