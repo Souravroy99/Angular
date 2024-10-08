@@ -1,0 +1,71 @@
+<h1>{{ title + " I am the best" }}</h1>
+<h2>{{ title }}</h2>
+<!-- This is called string interpolation ==> {{}} -->
+<h1>{{ "val => " + (2 * 10 + 1 - 10) }}</h1>
+
+<!-- n Angular, string interpolation is a feature that allows you to embed or bind dynamic expressions (typically properties from a component class) within a string, directly in the HTML template. -->
+
+<!-- Everything is converts to string that's why this is called as string inetrpolation. ==> 2(num)+1(num) = 3(num) ==> 3(String) -->
+
+<img src="{{ imgURL }}" alt="Billionaire" />
+<!-- String Interpolation -->
+<img [src]="imgURL" alt="Billionaire" />
+<!-- Property Binding -->
+
+<!-- String Interpolation  Vs  Property Binding -->
+<!-- 
+    ST ==> Everything converts into string
+    PB ==> Everything is not converts into string 
+-->
+
+<button disabled="{{ isDisabled }}">Disable button by SI</button>
+<button [disabled]="isDisabled">Disable button by PB</button>
+
+
+<!-- Class Binding ==> We can apply multiple css styles simultaneously, that means inside of a class there may me multiple style possible -->
+
+<button [class.activeBtn]="isActive" [class.no-activeBtn]="!isActive">
+  Click me
+</button>
+
+
+
+<!-- Style Binding ==> We can apply only one style by one style binding -->
+ <button style.background="{{'pink'}}" >Click</button>
+ <button [style.color]="isActive ? 'red' : 'blue' " >Click</button>
+
+<!-- Multiple Style Binding -->
+<button 
+    [style.color]="isActive ? 'black' : 'white' " 
+    [style.backgroundColor]="isActive ? 'white' : 'black' " 
+    [style.border]="isActive ? '3px solid gray': '10px solid red'"
+
+>Click</button>
+
+
+
+
+
+
+
+
+<!-- Event Binding -->
+ <button (click)="buttonClick()">Click Bro! Event Binding</button>
+ <button (mouseover)="buttonClick()">Click Bro! Event Binding</button>
+
+ <input type="text" (keyup)="keyEnter()">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-navbar></app-navbar>
+<app-header></app-header> -->
